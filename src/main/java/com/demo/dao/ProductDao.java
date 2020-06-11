@@ -63,4 +63,14 @@ public class ProductDao {
         em.close();
         return list;
     }
+    public Product getProductById(int id){
+        em = emf.createEntityManager();
+        em.getTransaction().begin();
+        Product p = em.find(Product.class, id);
+        em.getTransaction().commit();
+        em.close();
+        return p;
+    }
+
+
 }
