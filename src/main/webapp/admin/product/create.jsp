@@ -29,32 +29,32 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form">
+                        <form role="form" method="post" action="create">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    <label for="price">Price</label>
+                                    <input type="number" class="form-control" name="price" id="price" placeholder="Enter price">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputFile">File input</label>
-                                    <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="exampleInputFile">
-                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                        </div>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text" id="">Upload</span>
-                                        </div>
+                                    <label for="price">Description</label>
+                                    <input type="text" class="form-control" name="description" id="description" placeholder="Enter description">
+                                </div>
+                                <div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="text" class="form-control" style="display: none" id="image" name="image">
+                            </div>
+                                <div class="form-group">
+                                    <img id="previous" style="display: none"  src="#" class="hidden img-thumbnail" alt="Alternate Text" style="width: 100px" />
+                                    <div style="margin-top: 5px">
+                                        <button type="button" id="upload_widget" class="genric-btn info radius">Upload files</button>
                                     </div>
                                 </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                </div>
+
+
                             </div>
                             <!-- /.card-body -->
 
@@ -62,6 +62,7 @@
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </form>
+
                     </div>
                     <!-- /.card -->
                 </div>
@@ -72,3 +73,24 @@
     </section>
     <!-- /.content -->
 </div>
+<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    var myWidget = cloudinary.createUploadWidget({
+            cloudName: 'hanv11',
+            uploadPreset: 'bpmopgln'}, (error, result) => {
+            if (!error && result && result.event === "success") {
+                console.log('Done! Here is the image info: ', result.info);
+                var imgLink = result.info.secure_url;
+                document.querySelector("input[name='image']").value = imgLink;
+                var imgPrevious = document.getElementById("previous");
+                imgPrevious.src = imgLink;
+                imgPrevious.style.display = "inline";
+            }
+        }
+    )
+
+    document.getElementById("upload_widget").addEventListener("click", function(){
+        myWidget.open();
+    }, false);
+</script>
