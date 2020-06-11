@@ -1,6 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="tags/tagslib.jsp" %>
-<html lang="en">
+
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
     <!-- Navbar -->
@@ -622,4 +620,3 @@
 </div>
 <!-- ./wrapper -->
 </body>
-</html>
