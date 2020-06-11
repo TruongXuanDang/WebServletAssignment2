@@ -4,9 +4,9 @@
         <pattern>/api*</pattern>
 
     </excludes>
-<!--    <decorator name="template" page="admin/admin-template.jsp">-->
-<!--        <pattern>/admin</pattern>-->
-<!--    </decorator>-->
+    <decorator name="admin-template" page="admin/admin-template.jsp">
+        <pattern>/admin</pattern>
+    </decorator>
 
     <decorator name="template" page="template.jsp">
         <pattern>/*</pattern>
