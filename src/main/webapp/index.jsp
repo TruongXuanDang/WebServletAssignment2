@@ -159,31 +159,19 @@
     <div class="container">
         <ul>
             <li>
-<<<<<<< HEAD
                 <span class="icon"><i class="fa fa-shopping-cart" style="margin-top: 5px;" aria-hidden="true"></i></span>
-=======
-                <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
->>>>>>> master
                 <h3>SAFE SHOPPING</h3>
                 <h5>Safe Shopping Guarantee</h5>
                 <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
             </li>
             <li>
-<<<<<<< HEAD
                 <span class="icon return"><i class="fa fa-reply-all" style="margin-top: 5px;" aria-hidden="true"></i></span>
-=======
-                <span class="icon return"><i class="fa fa-reply-all" aria-hidden="true"></i></span>
->>>>>>> master
                 <h3>30- DAY RETURN</h3>
                 <h5>Moneyback guarantee</h5>
                 <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
             </li>
             <li>
-<<<<<<< HEAD
                 <span class="icon chat"><i class="fa fa-comments" style="margin-top: 5px;" aria-hidden="true"></i></span>
-=======
-                <span class="icon chat"><i class="fa fa-comments" aria-hidden="true"></i></span>
->>>>>>> master
                 <h3>24/7 SUPPORT</h3>
                 <h5>online Consultations</h5>
                 <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
