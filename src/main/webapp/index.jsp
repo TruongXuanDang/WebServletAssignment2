@@ -86,7 +86,7 @@
             <c:forEach items="${productList}" var="product">
                 <div class="col-lg-2 col-md-3 col-sm-4">
                     <div class="item">
-                        <img src="images/r1.jpg" alt="img">
+                        <img src="${product.image}" alt="img">
                         <h3><a href="#">${product.name}</a></h3>
                         <h6><span class="price">${product.price}</span> / <a href="#">Buy Now</a></h6>
                     </div>

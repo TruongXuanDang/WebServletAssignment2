@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ProductServlet", urlPatterns = "/")
+@WebServlet(name = "ProductServlet", urlPatterns = "/a")
 public class ProductServlet extends HttpServlet {
     @EJB
     ProductDao productDao;
@@ -23,6 +23,6 @@ public class ProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Product> productList = productDao.getProduct();
         request.setAttribute("productList",productList);
-        request.getRequestDispatcher("index.jsp").forward(request, response);
+        request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
 }
