@@ -1,8 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="com.demo.entity.Product" %>
-<%@ page import="java.util.List" %><%
+<%@ page import="java.util.List" %>
+<%
     List<Product> productList = (List<Product>) request.getAttribute("productList");
 %>
+<header>
+    <%@ include file="decorators/header.jsp"%>
+</header>
 <section class="recomended-sec">
     <div class="container">
         <div class="title">
@@ -83,7 +87,7 @@
             <hr>
         </div>
         <div class="row">
-            <c:forEach items="${productList}" var="product">
+            <c:forEach items="<%=productList%>" var="product">
                 <div class="col-lg-2 col-md-3 col-sm-4">
                     <div class="item">
                         <img src="${product.image}" alt="img">

@@ -1,4 +1,4 @@
-package com.demo.controller.admin;
+package com.demo.controller;
 
 import com.demo.dao.ProductDao;
 import com.demo.entity.Product;
@@ -10,12 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
-
-@WebServlet(name = "ProductServlet",urlPatterns = "/products")
-
-public class ProductServlet extends HttpServlet {
+@WebServlet(name = "ProductDetailServlet",urlPatterns = "/product")
+public class ProductDetailServlet extends HttpServlet {
     @EJB
     ProductDao productDao;
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -23,11 +20,9 @@ public class ProductServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Product> productList = productDao.getProduct();
-        request.setAttribute("productList",productList);
-
-//        request.getRequestDispatcher("index.jsp").forward(request, response);
-        request.getRequestDispatcher("product.jsp").forward(request, response);
+        Product product = productDao.getProductById(Integer.parseInt(request.getParameter("id")));
+        request.setAttribute("product",product);
+        request.getRequestDispatcher("/product-single.jsp").forward(request, response);
 
     }
 }

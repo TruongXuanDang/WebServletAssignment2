@@ -1,46 +1,26 @@
+<%@ page import="com.demo.entity.Product" %>
+<% Product p = (Product) request.getAttribute("product");%>
 <div class="breadcrumb">
     <div class="container">
-        <a class="breadcrumb-item" href="index.html">Home</a>
-        <span class="breadcrumb-item active">Terms and Condition</span>
+        <a class="breadcrumb-item" href="index.jsp">Home</a>
+        <span class="breadcrumb-item active">Shop</span>
     </div>
 </div>
 <section class="product-sec">
     <div class="container">
-        <h1>7 Day Self publish How to Write a Book</h1>
+        <h1><%=p.getName()%></h1>
         <div class="row">
+            <input type="text" value="<%=p.getId()%>"style="display: none">
             <div class="col-md-6 slider-sec">
                 <!-- main slider carousel -->
                 <div id="myCarousel" class="carousel slide">
                     <!-- main slider carousel items -->
                     <div class="carousel-inner">
                         <div class="active item carousel-item" data-slide-number="0">
-                            <img src="images/product1.jpg" class="img-fluid">
-                        </div>
-                        <div class="item carousel-item" data-slide-number="1">
-                            <img src="images/product2.jpg" class="img-fluid">
-                        </div>
-                        <div class="item carousel-item" data-slide-number="2">
-                            <img src="images/product3.jpg" class="img-fluid">
+                            <img src="<%=p.getImage()%>" class="img-fluid">
                         </div>
                     </div>
                     <!-- main slider carousel nav controls -->
-                    <ul class="carousel-indicators list-inline">
-                        <li class="list-inline-item active">
-                            <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#myCarousel">
-                                <img src="images/product1.jpg" class="img-fluid">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a id="carousel-selector-1" data-slide-to="1" data-target="#myCarousel">
-                                <img src="images/product2.jpg" class="img-fluid">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a id="carousel-selector-2" data-slide-to="2" data-target="#myCarousel">
-                                <img src="images/product3.jpg" class="img-fluid">
-                            </a>
-                        </li>
-                    </ul>
                 </div>
                 <!--/main slider carousel-->
             </div>
@@ -48,19 +28,7 @@
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and typesetting industry. Lorem Ipsum has been the book. </p>
                 <p>t has survived not only fiveLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and</p>
                 <ul>
-                    <li>
-                        <span class="name">Digital List Price</span><span class="clm">:</span>
-                        <span class="price">$4.71</span>
-                    </li>
-                    <li>
-                        <span class="name">Print List Price</span><span class="clm">:</span>
-                        <span class="price">$10.99</span>
-                    </li>
-                    <li>
-                        <span class="name">Kindle Price</span><span class="clm">:</span>
-                        <span class="price final">$3.37</span>
-                    </li>
-                    <li><span class="save-cost">Save $7.62 (69%)</span></li>
+                    <span class="price">$<%=p.getPrice()%></span>
                 </ul>
                 <div class="btn-sec">
                     <button class="btn ">Add To cart</button>
