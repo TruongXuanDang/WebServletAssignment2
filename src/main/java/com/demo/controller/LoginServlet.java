@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
 
             HttpSession session = request.getSession();
             session.setAttribute("user", username);
-            request.getRequestDispatcher("/index.jsp").forward(request, response);
+           response.sendRedirect("products");
 
 
         } else {

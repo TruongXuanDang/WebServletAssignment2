@@ -72,7 +72,7 @@
         <p>It has survived not only fiveLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and</p>
         <div class="btn-sec">
             <a href="shop.html" class="btn yellow">shop books</a>
-            <a href="login.html" class="btn black">subscriptions</a>
+            <a href="login.jsp" class="btn black">subscriptions</a>
         </div>
     </div>
 </section>

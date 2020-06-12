@@ -8,7 +8,7 @@
                         <div class="title">
                             <h3>welcome to bookstore</h3>
                             <h5>Discover the best books online with us</h5>
-                            <a href="#" class="btn">shop books</a>
+                            <a href="products" class="btn">shop books</a>
                         </div>
                     </div>
                 </div>

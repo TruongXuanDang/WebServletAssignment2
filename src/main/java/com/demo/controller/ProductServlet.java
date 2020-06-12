@@ -1,4 +1,4 @@
-package com.demo.controller.admin;
+package com.demo.controller;
 
 import com.demo.dao.ProductDao;
 import com.demo.entity.Product;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ProductServlet", urlPatterns = "/a")
+@WebServlet(name = "ProductServlet", urlPatterns = "/products")
 public class ProductServlet extends HttpServlet {
     @EJB
     ProductDao productDao;
