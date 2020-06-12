@@ -44,9 +44,9 @@
                                 <tbody>
                                 <% for (int i = 0; i < list.size(); i++) { %>
                                 <tr role="row" class="even">
-                                    <td tabindex="0" class="sorting_1"><%=list.get(i).getName()%></td>
+                                    <td tabindex="0" class="sorting_1"><a href=<%="edit?id="+list.get(i).getId()%>><%=list.get(i).getName()%></a></td>
                                     <td><%=list.get(i).getPrice()%></td>
-                                    <td><%=list.get(i).getImage()%></td>
+                                    <td><img style="height: 180px;margin: 0 auto;" src=<%=list.get(i).getImage()%>></td>
                                     <td><%=list.get(i).getDescription()%></td>
                                 </tr>
                                 <%} %>

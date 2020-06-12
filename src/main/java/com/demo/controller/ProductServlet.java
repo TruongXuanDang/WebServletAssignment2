@@ -17,15 +17,15 @@ public class ProductServlet extends HttpServlet {
     @EJB
     ProductDao productDao;
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+//        request.getRequestURI().contains()
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Product> productList = productDao.getProduct();
         request.setAttribute("productList",productList);
 
-//        request.getRequestDispatcher("index.jsp").forward(request, response);
         request.getRequestDispatcher("product.jsp").forward(request, response);
 
     }
+
 }
