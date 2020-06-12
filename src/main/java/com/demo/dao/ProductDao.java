@@ -35,6 +35,7 @@ public class ProductDao {
         Product p = em.find(Product.class, id);
         p.setName(product.getName());
         p.setPrice(product.getPrice());
+        p.setCategoryId(product.getCategoryId());
         p.setDescription(product.getDescription());
         p.setImage(product.getImage());
         em.getTransaction().commit();
