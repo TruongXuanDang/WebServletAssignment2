@@ -1,6 +1,10 @@
 <%@ page import="com.demo.entity.Product" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.demo.entity.Categories" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<% Product p = (Product) request.getAttribute("product");%>
+<% Product p = (Product) request.getAttribute("product");
+    List<Categories> list = (List<Categories>) request.getAttribute("category");
+%>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -32,26 +36,38 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form" method="post" action="update">
+                        <form role="form" method="post" action="edit">
                             <div class="card-body">
                                 <div class="form-group">
+                                    <input type="text" name="id" value="<%= p.getId() %>" style="display: none">
                                     <label for="name">Name</label>
                                     <input type="text" class="form-control" name="name" id="name" value="<%= p.getName() %>" placeholder="Enter name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="categoryId">Category</label>
+                                    <select name="categoryId" id="categoryId">
+<%--                                        <c:forEach items="${requestScope.get('category')}" var="item">--%>
+<%--                                        <option value="${item.getId()}" ${ p.getCategoryId()} > ${item.getName()}</option>--%>
+<%--                                        </c:forEach>--%>
+                                        <% for (int i = 0; i < list.size(); i++) { %>
+                                            <option value="<%=list.get(i).getId()%>" <%= list.get(i).getId()==(p.getCategoryId())?"selected":"" %>><%=list.get(i).getName()%></option>
+                                        <%} %>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="price">Price</label>
                                     <input type="number" class="form-control" name="price" id="price" value="<%= p.getPrice() %>" placeholder="Enter price">
                                 </div>
                                 <div class="form-group">
-                                    <label for="price">Description</label>
+                                    <label for="description">Description</label>
                                     <input type="text" class="form-control" name="description" value="<%= p.getDescription() %>" id="description" placeholder="Enter description">
                                 </div>
                                 <div class="form-group">
                                     <label for="image">Image</label>
-                                    <input type="text" class="form-control" style="display: none" id="image" name="image">
+                                    <input type="text" class="form-control" style="display: none" id="image" name="image" value="<%=p.getImage()%>">
                                 </div>
                                 <div class="form-group">
-                                    <img id="previous" style="display: none"  src="<%= p.getImage() %>" class="hidden img-thumbnail" alt="Alternate Text" style="width: 100px" />
+                                    <img id="previous"  src="<%= p.getImage() %>" class="hidden img-thumbnail" alt="Alternate Text" style="width: 100px" />
                                     <div style="margin-top: 5px">
                                         <button type="button" id="upload_widget" class="genric-btn info radius">Upload files</button>
                                     </div>

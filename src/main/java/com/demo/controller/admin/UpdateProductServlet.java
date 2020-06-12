@@ -1,6 +1,8 @@
 package com.demo.controller.admin;
 
+import com.demo.dao.CategoryDao;
 import com.demo.dao.ProductDao;
+import com.demo.entity.Categories;
 import com.demo.entity.Product;
 
 import javax.ejb.EJB;
@@ -10,14 +12,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "UpdateProductServlet", urlPatterns = "/admin/product/edit")
 public class UpdateProductServlet extends HttpServlet {
     @EJB
     ProductDao productDao;
+    @EJB
+    CategoryDao categoryDao;
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String ids = request.getParameter("id");
-        int id = Integer.parseInt(ids);
+        int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         int price = Integer.parseInt(request.getParameter("price"));
         int categoryId = Integer.parseInt(request.getParameter("categoryId"));
@@ -38,7 +42,10 @@ public class UpdateProductServlet extends HttpServlet {
         String sid = request.getParameter("id");
         int id = Integer.parseInt(sid);
         Product p = productDao.getProductById(id);
+
+        List<Categories> list = categoryDao.getCategory();
         request.setAttribute("product",p);
+        request.setAttribute("category",list);
         request.getRequestDispatcher("/admin/product/update.jsp").forward(request, response);
 
 

@@ -1,3 +1,6 @@
+<%@ page import="com.demo.entity.Categories" %>
+<%@ page import="java.util.List" %>
+<%List<Categories> list = (List<Categories>) request.getAttribute("category");%>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -34,6 +37,17 @@
                                 <div class="form-group">
                                     <label for="name">Name</label>
                                     <input type="text" class="form-control" name="name" id="name" placeholder="Enter name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="categoryId">Category</label>
+                                    <select name="categoryId" id="categoryId">
+                                        <%--                                        <c:forEach items="${requestScope.get('category')}" var="item">--%>
+                                        <%--                                        <option value="${item.getId()}" ${ p.getCategoryId()} > ${item.getName()}</option>--%>
+                                        <%--                                        </c:forEach>--%>
+                                        <% for (int i = 0; i < list.size(); i++) { %>
+                                        <option value="<%=list.get(i).getId()%>"><%=list.get(i).getName()%></option>
+                                        <%} %>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="price">Price</label>
