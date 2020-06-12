@@ -20,7 +20,7 @@
                     <h3>how to be a bwase</h3>
                     <h6><span class="price">$49</span> / <a href="#">Buy Now</a></h6>
                     <div class="hover">
-                        <a href="product-single.html">
+                        <a href="products">
                             <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
                         </a>
                     </div>
