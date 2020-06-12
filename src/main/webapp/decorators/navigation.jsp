@@ -8,16 +8,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="navbar-item active">
-                        <a href="products" class="nav-link">Home</a>
+                        <a href="index.jsp" class="nav-link">Home</a>
                     </li>
                     <li class="navbar-item">
                         <a href="products" class="nav-link">Shop</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="products" class="nav-link">About</a>
+                        <a href="index.jsp" class="nav-link">About</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="products" class="nav-link">FAQ</a>
+                        <a href="index.jsp" class="nav-link">FAQ</a>
                     </li>
                     <li class="navbar-item">
                         <a href="login" class="nav-link">Login</a>
