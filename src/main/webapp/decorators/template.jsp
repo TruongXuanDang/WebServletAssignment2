@@ -10,7 +10,7 @@
 
 <html>
 <head>
-    <title>Template</title>
+    <title></title>
     <%@ include file="head.jsp" %>
     <dec:head />
 </head>
