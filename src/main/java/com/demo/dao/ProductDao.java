@@ -35,6 +35,7 @@ public class ProductDao {
         Product p = em.find(Product.class, id);
         p.setName(product.getName());
         p.setPrice(product.getPrice());
+        p.setCategoryId(product.getCategoryId());
         p.setDescription(product.getDescription());
         p.setImage(product.getImage());
         em.getTransaction().commit();
@@ -63,4 +64,14 @@ public class ProductDao {
         em.close();
         return list;
     }
+    public Product getProductById(int id){
+        em = emf.createEntityManager();
+        em.getTransaction().begin();
+        Product p = em.find(Product.class, id);
+        em.getTransaction().commit();
+        em.close();
+        return p;
+    }
+
+
 }

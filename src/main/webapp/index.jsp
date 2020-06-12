@@ -1,4 +1,8 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.demo.entity.Product" %>
+<%@ page import="java.util.List" %><%
+    List<Product> productList = (List<Product>) request.getAttribute("productList");
+%>
 <section class="recomended-sec">
     <div class="container">
         <div class="title">
@@ -79,10 +83,19 @@
             <hr>
         </div>
         <div class="row">
+            <c:forEach items="${productList}" var="product">
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="item">
+                        <img src="${product.image}" alt="img">
+                        <h3><a href="#">${product.name}</a></h3>
+                        <h6><span class="price">${product.price}</span> / <a href="#">Buy Now</a></h6>
+                    </div>
+                </div>
+            </c:forEach>
             <div class="col-lg-2 col-md-3 col-sm-4">
                 <div class="item">
                     <img src="images/r1.jpg" alt="img">
-                    <h3><a href="#">Keepers of the kalachakara</a></h3>
+                    <h3><a href="#">${productList[0].name}</a></h3>
                     <h6><span class="price">$19</span> / <a href="#">Buy Now</a></h6>
                 </div>
             </div>
@@ -159,19 +172,19 @@
     <div class="container">
         <ul>
             <li>
-                <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                <span class="icon"><i class="fa fa-shopping-cart" style="margin-top: 5px;" aria-hidden="true"></i></span>
                 <h3>SAFE SHOPPING</h3>
                 <h5>Safe Shopping Guarantee</h5>
                 <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
             </li>
             <li>
-                <span class="icon return"><i class="fa fa-reply-all" aria-hidden="true"></i></span>
+                <span class="icon return"><i class="fa fa-reply-all" style="margin-top: 5px;" aria-hidden="true"></i></span>
                 <h3>30- DAY RETURN</h3>
                 <h5>Moneyback guarantee</h5>
                 <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
             </li>
             <li>
-                <span class="icon chat"><i class="fa fa-comments" aria-hidden="true"></i></span>
+                <span class="icon chat"><i class="fa fa-comments" style="margin-top: 5px;" aria-hidden="true"></i></span>
                 <h3>24/7 SUPPORT</h3>
                 <h5>online Consultations</h5>
                 <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
