@@ -36,7 +36,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="name">Name</label>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter name">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="categoryId">Category</label>
@@ -51,15 +51,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="price">Price</label>
-                                    <input type="number" class="form-control" name="price" id="price" placeholder="Enter price">
+                                    <input type="number" class="form-control" name="price" id="price" placeholder="Enter price" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="price">Description</label>
-                                    <input type="text" class="form-control" name="description" id="description" placeholder="Enter description">
+                                    <input type="text" class="form-control" name="description" id="description" placeholder="Enter description" required>
                                 </div>
                                 <div class="form-group">
                                 <label for="image">Image</label>
-                                <input type="text" class="form-control" style="display: none" id="image" name="image">
+                                <input type="text" class="form-control" style="display: none" id="image" name="image" required>
                             </div>
                                 <div class="form-group">
                                     <img id="previous" style="display: none"  src="#" class="hidden img-thumbnail" alt="Alternate Text" style="width: 100px" />

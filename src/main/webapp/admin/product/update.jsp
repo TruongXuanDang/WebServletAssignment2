@@ -41,7 +41,7 @@
                                 <div class="form-group">
                                     <input type="text" name="id" value="<%= p.getId() %>" style="display: none">
                                     <label for="name">Name</label>
-                                    <input type="text" class="form-control" name="name" id="name" value="<%= p.getName() %>" placeholder="Enter name">
+                                    <input type="text" class="form-control" name="name" id="name" value="<%= p.getName() %>" placeholder="Enter name" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="categoryId">Category</label>
@@ -56,15 +56,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="price">Price</label>
-                                    <input type="number" class="form-control" name="price" id="price" value="<%= p.getPrice() %>" placeholder="Enter price">
+                                    <input type="number" class="form-control" name="price" id="price" value="<%= p.getPrice() %>" placeholder="Enter price" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="description">Description</label>
-                                    <input type="text" class="form-control" name="description" value="<%= p.getDescription() %>" id="description" placeholder="Enter description">
+                                    <input type="text" class="form-control" name="description" value="<%= p.getDescription() %>" id="description" placeholder="Enter description" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="image">Image</label>
-                                    <input type="text" class="form-control" style="display: none" id="image" name="image" value="<%=p.getImage()%>">
+                                    <input type="text" class="form-control" style="display: none" id="image" name="image" value="<%=p.getImage()%>" required>
                                 </div>
                                 <div class="form-group">
                                     <img id="previous"  src="<%= p.getImage() %>" class="hidden img-thumbnail" alt="Alternate Text" style="width: 100px" />
