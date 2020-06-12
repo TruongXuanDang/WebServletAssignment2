@@ -1,3 +1,8 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.demo.entity.Product" %>
+<%@ page import="java.util.List" %><%
+    List<Product> productList = (List<Product>) request.getAttribute("productList");
+%>
 <section class="recomended-sec">
     <div class="container">
         <div class="title">
@@ -78,10 +83,19 @@
             <hr>
         </div>
         <div class="row">
+            <c:forEach items="${productList}" var="product">
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="item">
+                        <img src="images/r1.jpg" alt="img">
+                        <h3><a href="#">${product.name}</a></h3>
+                        <h6><span class="price">${product.price}</span> / <a href="#">Buy Now</a></h6>
+                    </div>
+                </div>
+            </c:forEach>
             <div class="col-lg-2 col-md-3 col-sm-4">
                 <div class="item">
                     <img src="images/r1.jpg" alt="img">
-                    <h3><a href="#">Keepers of the kalachakara</a></h3>
+                    <h3><a href="#">${productList[0].name}</a></h3>
                     <h6><span class="price">$19</span> / <a href="#">Buy Now</a></h6>
                 </div>
             </div>
