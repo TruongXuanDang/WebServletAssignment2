@@ -17,12 +17,9 @@
 <body>
 <header>
     <%@ include file="navigation.jsp"%>
-    <%@ include file="header.jsp"%>
+
 </header>
-
-
 <dec:body />
-
 <%@ include file="footer.jsp"%>
 <%@ include file="js.jsp"%>
 
