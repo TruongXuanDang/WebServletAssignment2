@@ -1,31 +1,30 @@
 <div class="breadcrumb">
     <div class="container">
-        <a class="breadcrumb-item" href="index.html">Home</a>
+        <a class="breadcrumb-item" href="index.jsp">Home</a>
         <span class="breadcrumb-item active">Register</span>
     </div>
 </div>
 <section class="static about-sec">
     <div class="container">
-        <h1>My Account / REgister</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and scrambled it to make a type specimen book. It has survived not only fiveLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem </p>
+        <h1>My Account / Register</h1>
         <div class="form">
-            <form>
+            <form  action="register" method="post">
                 <div class="row">
                     <div class="col-md-4">
-                        <input placeholder="Enter User Name" required>
+                        <input type="text" name="username" placeholder="username" required>
                         <span class="required-star">*</span>
                     </div>
                     <div class="col-md-4">
-                        <input type="email" placeholder="Password" required>
+                        <input type="password" name="password" placeholder="password" required>
                         <span class="required-star">*</span>
                     </div>
                     <div class="col-md-4">
-                        <input type="email" placeholder="Repeat Password" required>
+                        <input type="text" name="phone" placeholder="phone" required>
                         <span class="required-star">*</span>
                     </div>
                     <div class="col-lg-8 col-md-12">
-                        <button class="btn black">Register</button>
-                        <h5>not Registered? <a href="login.html">Login here</a></h5>
+                        <button class="btn btn-primary align-content-center" type="submit">Register</button>
+                        <h5>not Registered? <a href="login.jsp">Login here</a></h5>
                     </div>
                 </div>
             </form>

@@ -29,9 +29,6 @@ public class User {
     @Column(name = "avatar")
     private String avatar;
 
-    @Column(name = "birthday")
-    private java.sql.Date birthday;
-
     @Column(name = "email")
     private String email;
 
@@ -81,14 +78,6 @@ public class User {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
-    }
-
-    public java.sql.Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(java.sql.Date birthday) {
-        this.birthday = birthday;
     }
 
     public String getEmail() {
