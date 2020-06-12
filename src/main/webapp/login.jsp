@@ -7,15 +7,14 @@
 <section class="static about-sec">
     <div class="container">
         <h1>My Account / Login</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and scrambled it to make a type specimen book. It has survived not only fiveLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem </p>
         <div class="form">
             <form action="login" me method="post">
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <input placeholder="Enter User Name" name="username" required>
                         <span class="required-star">*</span>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <input type="password" name="password" placeholder="Enter Password" required>
                         <span class="required-star">*</span>
                     </div>

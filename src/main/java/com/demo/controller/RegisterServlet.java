@@ -34,8 +34,7 @@ public class RegisterServlet extends HttpServlet {
         user.setGender("Male");
         user.setAvatar("as");
         userDao.insertUser(user);
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/index.jsp");
-        requestDispatcher.forward(req, resp);
+        resp.sendRedirect("login");
 
     }
 }

@@ -11,17 +11,16 @@
                         <a href="index.jsp" class="nav-link">Home</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="shop.jsp" class="nav-link">Shop</a>
+                        <a href="products" class="nav-link">Shop</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="about.jsp" class="nav-link">About</a>
+                        <a href="index.jsp" class="nav-link">About</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="faq.jsp" class="nav-link">FAQ</a>
+                        <a href="index.jsp" class="nav-link">FAQ</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="login.jsp" class="nav-link">Login</a>
-                    </li>
+                        <a href="login" class="nav-link">Login</a>
                 </ul>
                 <div class="cart my-2 my-lg-0">
                             <span>
